@@ -1,7 +1,9 @@
 from django.db import models
 from helpers.models import BaseModel
 from author.models import Author
-from managers.models import ThisMonthManager, PopularPostedManager
+from managers.models import PopularPostedManager
+
+
 
 # Create your models here.
 CREATED = "created"
@@ -46,5 +48,5 @@ class Post(BaseModel):
 
     is_popular = models.BooleanField(default=False)
     
-    this_month_managers = ThisMonthManager()
+    objects = models.Manager()
     popular_post_managers = PopularPostedManager()

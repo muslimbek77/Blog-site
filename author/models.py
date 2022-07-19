@@ -1,6 +1,6 @@
-from unittest.mock import Base
 from django.db import models
 from helpers.models import BaseModel
+from managers.models import TopAuthorsManager
 # Create your models here.
 
 
